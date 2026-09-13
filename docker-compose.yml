@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  tms-middleware:
+    build: .
+    ports:
+      - "8000:8000" # Mapea el puerto 8000 de tu PC al 8000 del contenedor
+    env_file:
+      - .env        # Carga los secretos de forma segura
+    restart: unless-stopped
