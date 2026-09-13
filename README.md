@@ -61,7 +61,9 @@ pip install -r requirements.txt
 Iniciar el servidor:
 uvicorn Protocolo_de_conexion_TCP:app --host 0.0.0.0 --port 8000 --reload
 
-📍 Endpoints Principales
-|Método | Ruta| Descripción |Protocolo Destino |
-|POST | verify-carrier |Valida el estatus del MC Number con la API de FMCSAHTTPS | HTTPS / JSON |
-|POST | loads/* |Consulta y actualización de cargas en el TMS legadoTCP | Socket crudo (|) |
+## 📍 Endpoints Principales
+
+| Método | Ruta | Descripción | Protocolo Destino |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/verify-carrier` | Valida el estatus del MC Number con la API de FMCSA | HTTPS / JSON |
+| `POST` | `/loads/*` | Consulta y actualización de cargas en el TMS legado | TCP Socket crudo (`\|`) |
