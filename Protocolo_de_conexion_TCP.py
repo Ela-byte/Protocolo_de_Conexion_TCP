@@ -9,10 +9,14 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any, List
+from fastapi.responses import RedirectResponse
 
 load_dotenv()
 
 app = FastAPI(title="HappyRobot TMS Middleware")
+@app.get("/", include_in_schema=False)
+async def root():
+    return RedirectResponse(url="/docs")
 
 # --- CONFIGURACIÓN DEL ENTORNO ---
 TMS_HOST = os.getenv("TMS_HOST", "tramway.proxy.rlwy.net").strip()
