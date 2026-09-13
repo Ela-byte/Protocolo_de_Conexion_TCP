@@ -59,7 +59,7 @@ python -m venv venv
 Instalar dependencias:
 pip install -r requirements.txt
 Iniciar el servidor:
-uvicorn Protocolo_de_conexion_TCP:app --host 0.0.0.0 --port 8000 --reload
+uvicorn, Protocolo_de_conexion_TCP:app, --host 0.0.0.0, --port 8000, --reload,
 
 ## 📍 Endpoints Principales
 
