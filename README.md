@@ -65,5 +65,5 @@ uvicorn, Protocolo_de_conexion_TCP:app, --host 0.0.0.0, --port 8000, --reload,
 
 | Método | Ruta | Descripción | Protocolo Destino |
 | :--- | :--- | :--- | :--- |
-| `POST` | `/verify-carrier` | Valida el estatus del MC Number con la API de FMCSA | HTTPS / JSON |
+| `GET` | `/verify-carrier` | Valida el estatus del MC Number con la API de FMCSA | HTTPS / JSON |
 | `POST` | `/loads/*` | Consulta y actualización de cargas en el TMS legado | TCP Socket crudo (`\|`) |
